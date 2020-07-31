@@ -276,18 +276,18 @@ class Coin(object):
 
 
 class Qtum(Coin):
-    NAME = "Qtum"
-    SHORTNAME = "Qtum"
+    NAME = "Evo"
+    SHORTNAME = "Evo"
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("0488b21e")
     XPRV_VERBYTES = bytes.fromhex("0488ade4")
-    P2PKH_VERBYTE = bytes.fromhex("3a")
-    P2SH_VERBYTES = [bytes.fromhex("32")]
+    P2PKH_VERBYTE = bytes.fromhex("00")
+    P2SH_VERBYTES = [bytes.fromhex("05")]
     WIF_BYTE = bytes.fromhex("80")
     GENESIS_HASH = '000075aef83cf2853580f8ae8ce6f8c3096cfa21d98334d6e3f95e5582ed986c'
-    TX_COUNT = 217380620
-    TX_COUNT_HEIGHT = 464000
-    TX_PER_BLOCK = 1800
+    TX_COUNT = 14228
+    TX_COUNT_HEIGHT = 9000
+    TX_PER_BLOCK = 13657
     PEER_DEFAULT_PORTS = {'t': '50001', 's': '50002'}
     PEERS = []
     DAEMON = daemon.QtumDaemon
@@ -295,7 +295,7 @@ class Qtum(Coin):
     STATIC_BLOCK_HEADERS = False
     BASIC_HEADER_SIZE = 180
     POW_BLOCK_COUNT = 5000
-    RPC_PORT = 3889
+    RPC_PORT = 41111
     CHUNK_SIZE = 1024
 
     @classmethod
@@ -357,4 +357,4 @@ class QtumTestnet(Qtum):
     TX_PER_BLOCK = 21
     PEERS = []
     PEER_DEFAULT_PORTS = {'t': '51001', 's': '51002'}
-    RPC_PORT = 13889
+    RPC_PORT = 31111
